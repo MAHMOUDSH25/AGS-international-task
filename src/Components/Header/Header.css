@@ -1,0 +1,217 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header__title {
+  font-family: "Roboto", sans-serif;
+  color: var(--clr-indigo950);
+}
+
+.header__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border-radius: 0 0 50px 50px;
+  margin-top: -10px;
+  background-color: var(--clr-sky300);
+  box-shadow: 0 0 20px var(--clr-blue200);
+}
+
+.severity {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
+
+.switch {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: #ff7b00;
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 15px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+.switch label {
+  cursor: pointer;
+  user-select: none;
+  color: rgb(255, 255, 255);
+  width: auto;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+label[for="yes"] {
+  padding: 1rem;
+}
+label[for="no"] {
+  padding: 1rem;
+}
+#no:checked ~ .switch {
+  background: #12df3e;
+}
+#no:checked ~ .switch span {
+  background: #fff;
+}
+#no:checked ~ .switch span:after {
+  background: #fff;
+}
+#yes:checked ~ .switch label[for="yes"] {
+  color: #fff;
+}
+#no:checked ~ .switch label[for="no"] {
+  color: #fff;
+}
+
+.severity__item {
+  text-align: center;
+  padding: 0.7rem;
+  border: solid 1px rgb(0, 255, 229);
+  border-radius: 10px;
+  background-color: rgba(218, 218, 218, 0.529);
+}
+
+.severity__input {
+  display: none;
+}
+
+/*  */
+/*  */
+/*  */
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.groupe__title {
+  text-align: center;
+  color: var(--clr-blue950);
+}
+
+.radio-title-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.radio-title-group .input-container .radio-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #079ad9;
+  border-radius: 5px;
+  transition: transform 300ms ease;
+}
+
+.radio-title-group .input-container .radio-title-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #079ad9;
+  padding: 0.5rem;
+}
+
+.radio-title-group .input-container .radio-button:checked + .radio-title {
+  background-color: #079ad9;
+  border: 2px solid #079ad9;
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+
+.radio-title-group
+  .input-container
+  .radio-button:checked
+  + .radio-title
+  .radio-title-label {
+  color: rgb(255, 253, 253);
+  background-color: #079ad9;
+}
+
+/*  */
+/*  */
+.department {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.department__list {
+  display: flex;
+  gap: 0.9rem;
+  list-style: none;
+  max-width: 100%;
+}
+
+.department__item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.7rem;
+  border: solid 1px rgb(0, 255, 229);
+  border-radius: 10px;
+  background-color: rgba(218, 218, 218, 0.529);
+}
+
+.department__input {
+  display: none;
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .header {
+    gap: 7rem;
+  }
+
+  .header__top {
+    width: 100%;
+  }
+
+  .categories {
+    padding-bottom: 6rem;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .header__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    margin-top: -10px;
+    background-color: var(--clr-sky300);
+    box-shadow: 0 0 20px var(--clr-blue200);
+  }
+}

@@ -1,0 +1,97 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.body__title {
+  font-weight: 700;
+  color: var(--clr-slate700);
+  margin-bottom: 0.01px;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.companies__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.company__item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 0.5rem;
+  border: solid 3px var(--clr-stone600);
+  border-radius: 15px 5px;
+  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.295));
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.company__item:hover {
+  scale: 1.5;
+  padding: 0.5rem;
+}
+
+#item__img {
+  width: 45px;
+}
+/*  */
+/*  */
+.accounts__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.accounts__title {
+  font-weight: 700;
+  color: var(--clr-slate700);
+  margin-bottom: 0.01px;
+}
+
+
+
+.acc__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.acc__item {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.acc__item:hover {
+  scale: 1.3;
+}
+
+#acc__img {
+  border-radius: 100px;
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .companies {
+    margin-left: -30px;
+  }
+
+  .people__accounts {
+    margin-left: -40px;
+  }
+}
